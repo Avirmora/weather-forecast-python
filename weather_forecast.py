@@ -37,7 +37,8 @@ if 'error' in weather_data:
     print("Error:", weather_data['error'])
 else:
     print(f"Weather in {weather_data['city']}:")
-    print(f"Temperature: {weather_data['temperature']}°F")
+    print(f"Temperature Fahrenheit: {weather_data['temperature']}°F")
+    print(f"Temperature Celsius: {round((weather_data['temperature'] - 32) * 5/9)}°C")
     print(f"Condition: {weather_data['description']}")
     print(f"Humidity: {weather_data['humidity']}%")
     print(f"Wind Speed: {weather_data['wind_speed']} m/s")
